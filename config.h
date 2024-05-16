@@ -19,7 +19,7 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-	"feh --bg-fill --randomize ~/Pictures/album_covers",
+	"feh", "--bg-fill", "--randomize", "~/Pictures/album_covers", NULL,
 	NULL /* terminate */
 };
 
@@ -62,7 +62,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-l", "5", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
